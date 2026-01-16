@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Артефакты и кристаллы — Архив Голонета</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>Кодекс Силы</h1>
+          <p>HOLO-NET ARCHIVE • Registry</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
+        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+      </div>
+
+      <nav class="nav" style="margin-top:10px;">
+        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
+        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
+        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
+        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
+        <a href="artifacts.html" data-navicon="artifacts">Артефакты и кристаллы <span class="badge">IV</span></a>
+        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
+        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
+        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
+
+        <div class="hr"></div>
+
+        <a href="changelog.html" data-navicon="changelog">Журнал изменений <span class="badge">LOG</span></a>
+        <a href="heresy.html" data-navicon="heresy">Ересь и мифы <span class="badge">X</span></a>
+        <a href="people.html" data-navicon="people">Фигуры канона <span class="badge">PPL</span></a>
+        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      </nav>
+
+      <div class="footer">
+        <div><span class="kbd">v1.0</span> • STATUS: <b>VERIFIED</b></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header" data-stamp="REGISTRY • VERIFIED COPY">
+        <h2>Раздел IV — Реестр артефактов и кристаллов</h2>
+        <div class="meta">
+          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
+          <div class="pill"><strong>CODE:</strong> IV</div>
+          <div class="pill"><strong>REV:</strong> 1.0</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Правило единственности:</strong> каждый объект имеет одну каноническую историю и свойства.
+        Варианты оформляются как отдельные объекты с отдельными ID.
+      </div>
+
+      <h3 data-article="IV-1">IV-1 Кристаллы</h3>
+      <table class="table">
+        <thead>
+          <tr><th>ID</th><th>Название</th><th>Свойства</th><th>Ограничения</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="kbd">KY-001</span></td>
+            <td>Кайбер (стандарт)</td>
+            <td>резонанс с пользователем, стабильный фокус</td>
+            <td>требует настройки; без дисциплины усиление не гарантируется</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">KY-002</span></td>
+            <td>Кайбер (нестабильный)</td>
+            <td>повышенный выход при нестабильности</td>
+            <td>риск перегруза/срыва; цена фиксируется в сценах</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">KY-003</span></td>
+            <td>Синтетический</td>
+            <td>предсказуемые параметры</td>
+            <td>хуже откликается на эмпатические практики</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-article="IV-2">IV-2 Артефакты</h3>
+      <table class="table">
+        <thead>
+          <tr><th>ID</th><th>Объект</th><th>Происхождение</th><th>Свойства</th><th>Ограничения</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="kbd">AR-101</span></td>
+            <td>Голокрон джедаев (учебный)</td>
+            <td>архив Храма</td>
+            <td>уроки, упражнения, выдержки Кодекса</td>
+            <td>не выдаёт “готовую силу”; требует времени и практики</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">AR-201</span></td>
+            <td>Голокрон ситхов (фрагмент)</td>
+            <td>изъят из тайника</td>
+            <td>ускоряет рост, провоцирует эмоции</td>
+            <td>допуск по сюжетному разрешению; цена обязательна</td>
+          </tr>
+          <tr>
+            <td><span class="kbd">AR-301</span></td>
+            <td>Амулет экранирования</td>
+            <td>реликт периферии</td>
+            <td>снижает точность чтения эмоций владельца</td>
+            <td>не даёт абсолютной невидимости</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-article="IV-3">IV-3 Добавление объекта</h3>
+      <p>
+        1) Карточка объекта: ID, происхождение, свойства, ограничения, условия получения.<br/>
+        2) Статус <span class="kbd">DRAFT</span>.<br/>
+        3) Проверка на противоречия Разделам I–III и V.<br/>
+        4) Утверждение и публикация версии реестра (LAW-4).
+      </p>
+
+      <div class="footer">
+        <div>NEXT: <a href="chronology.html">Раздел V — История и хронология</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/script.js"></script>
+  <script src="../assets/search.js"></script>
+</body>
+</html>

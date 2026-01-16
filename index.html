@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Кодекс Силы — Архив Голонета</title>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>Кодекс Силы</h1>
+          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
+        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <nav class="nav">
+        <a href="index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
+        <a href="pages/nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
+        <a href="pages/light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
+        <a href="pages/orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
+        <a href="pages/artifacts.html" data-navicon="artifacts">Реестр <span class="badge">IV</span></a>
+        <a href="pages/chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
+        <a href="pages/law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
+        <a href="pages/faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
+        <a href="pages/changelog.html" data-navicon="changelog">Журнал изменений <span class="badge">LOG</span></a>
+        <a href="pages/heresy.html" data-navicon="heresy">Ересь и мифы <span class="badge">ERR</span></a>
+        <a href="pages/people.html" data-navicon="people">Персоны <span class="badge">ID</span></a>
+        <a href="pages/templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      </nav>
+
+      <div class="footer">
+        <div><span class="kbd">v1.0.0</span> • STATUS: <b>VERIFIED</b></div>
+        <div style="margin-top:6px;">AUTHORITY: Council of Canon</div>
+        <div style="margin-top:6px;">SHORTCUTS: <span class="kbd">Ctrl+K</span> / <span class="kbd">/</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header" data-stamp="HOLO-NET ARCHIVE • VERIFIED COPY">
+        <h2>Единый РП-канон пользователей Силы</h2>
+        <div class="meta">
+          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
+          <div class="pill"><strong>EPOCH:</strong> CLONE WARS</div>
+          <div class="pill"><strong>REV:</strong> 1.0.0</div>
+          <div class="pill warn"><strong>EFFECTIVE:</strong> upon publish</div>
+        </div>
+      </div>
+
+      <p>
+        Настоящий архив — высший источник канона проекта. Любые материалы вне утверждённых статей имеют статус
+        <span class="kbd">DRAFT</span> и не применяются как обязательная норма.
+      </p>
+
+      <div class="callout">
+        <strong>Норма:</strong> При конфликте трактовок применяется LAW-1 «Верховенство Кодекса».
+        Для спорных случаев используется LAW-5 «Запрос толкования».
+      </div>
+
+      <div class="hr"></div>
+
+      <h3 data-article="P-1">Статусы материалов <a class="anchor" href="#article-p-1" title="Ссылка">#P-1</a></h3>
+      <table class="table">
+        <thead>
+          <tr><th>Статус</th><th>Смысл</th><th>Применение</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="pill warn"><strong>DRAFT</strong></span></td>
+            <td>Не канон</td>
+            <td>Разработка и обсуждение</td>
+          </tr>
+          <tr>
+            <td><span class="pill"><strong>REVIEW</strong></span></td>
+            <td>На утверждении</td>
+            <td>Временно, только по согласию сторон</td>
+          </tr>
+          <tr>
+            <td><span class="pill ok"><strong>VERIFIED</strong></span></td>
+            <td>Утверждено</td>
+            <td>Обязательное применение</td>
+          </tr>
+          <tr>
+            <td><span class="pill danger"><strong>REVOKED</strong></span></td>
+            <td>Отменено</td>
+            <td>Хранится как архив правок</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="hr"></div>
+
+      <h3 data-article="P-2">Быстрый доступ <a class="anchor" href="#article-p-2" title="Ссылка">#P-2</a></h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Канон</h4>
+          <p>Разделы I–V: природа Силы, стороны, ордена, реестр, хронология.</p>
+        </div>
+        <div class="card">
+          <h4>Закон</h4>
+          <p>LAW: утверждение, толкования, санкции, прецеденты. Основная процедура.</p>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div>NEXT: <a href="pages/nature.html">Раздел I — Природа Силы</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/bg.js"></script>
+  <script src="assets/script.js"></script>
+  <script src="assets/search.js"></script>
+</body>
+</html>

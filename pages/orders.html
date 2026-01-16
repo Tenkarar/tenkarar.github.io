@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ордена и учения — Архив Голонета</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>Кодекс Силы</h1>
+          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
+        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+      </div>
+
+      <nav class="nav" style="margin-top:10px;">
+        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
+        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
+        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
+        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
+        <a href="artifacts.html" data-navicon="artifacts">Артефакты и кристаллы <span class="badge">IV</span></a>
+        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
+        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
+        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
+
+        <div class="hr"></div>
+
+        <a href="changelog.html" data-navicon="changelog">Журнал изменений <span class="badge">LOG</span></a>
+        <a href="heresy.html" data-navicon="heresy">Ересь и мифы <span class="badge">X</span></a>
+        <a href="people.html" data-navicon="people">Фигуры канона <span class="badge">PPL</span></a>
+        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      </nav>
+
+      <div class="footer">
+        <div><span class="kbd">v1.0</span> • STATUS: <b>VERIFIED</b></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header" data-stamp="HOLO-NET ARCHIVE • VERIFIED COPY">
+        <h2>Раздел III — Ордена и учения</h2>
+        <div class="meta">
+          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
+          <div class="pill"><strong>CODE:</strong> III</div>
+          <div class="pill"><strong>REV:</strong> 1.0</div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Принцип:</strong> внутренние правила орденов действуют только в части,
+        не противоречащей Кодексу и разделу LAW.
+      </div>
+
+      <h3 data-article="III-1">III-1 Общие определения</h3>
+      <p>
+        Орден/учение — структура или доктрина, задающая методы обучения, нормы поведения и допуски к практикам Силы.
+        Любые исключения оформляются как утверждённые поправки.
+      </p>
+
+      <div class="hr"></div>
+
+      <h3 data-article="III-A">III-A Орден джедаев</h3>
+      <div class="grid">
+        <div class="card">
+          <h4>Назначение</h4>
+          <p>Защита Республики, дипломатия, стабилизация конфликтов, обучение пользователей Силы.</p>
+        </div>
+        <div class="card">
+          <h4>Ядро учения</h4>
+          <p>Самоконтроль, ответственность, служение, отказ от практик, ведущих к деградации личности.</p>
+        </div>
+      </div>
+
+      <table class="table" style="margin-top:12px;">
+        <thead>
+          <tr><th>Структура</th><th>Полномочия</th><th>Запреты</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Инициат → Падаван → Рыцарь → Мастер</td>
+            <td>миссии по мандату, обучение, применение Силы в рамках задач</td>
+            <td>пытки, месть, практики Тьмы, произвольное подчинение воли</td>
+          </tr>
+          <tr>
+            <td>Совет Ордена</td>
+            <td>допуски, дисциплина, утверждение внутренних директив</td>
+            <td>обход Кодекса и решений Совета Канона</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-article="III-B">III-B Орден ситхов</h3>
+      <p>
+        Ситхские учения базируются на эмоциях как источнике ускорения и на власти как самоцели.
+        В рамках проекта ситхские практики всегда требуют цены (LAW-6).
+      </p>
+
+      <div class="verdict">
+        <strong>COUNCIL VERDICT:</strong> любые техники, подпитываемые ненавистью и стремлением к доминированию,
+        квалифицируются как дрейф в Тьму и запускают последствия для персонажа.
+      </div>
+
+      <h3 data-article="III-C">III-C Серые джедаи</h3>
+      <p>
+        Серый путь допускает гибкость методов при сохранении этической рамки.
+        Практики Тьмы не “обнуляются” статусом серого — цена остаётся.
+      </p>
+
+      <table class="table" style="margin-top:12px;">
+        <thead>
+          <tr><th>Дозволено</th><th>Ограничения</th><th>Ересь</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>прагматичная защита, компромиссные решения, нестандартная дипломатия</td>
+            <td>запрет подпитки силой ненависти/садизма; запрет превращения людей в ресурс</td>
+            <td>пытки, тотальный контроль сознания, разрушение ради демонстрации силы</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="footer">
+        <div>NEXT: <a href="artifacts.html">Раздел IV — Артефакты и кристаллы</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/script.js"></script>
+  <script src="../assets/search.js"></script>
+</body>
+</html>

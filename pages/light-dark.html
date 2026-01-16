@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Свет и Тьма — Архив Голонета</title>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>Кодекс Силы</h1>
+          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
+        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+      </div>
+
+      <div class="hr"></div>
+
+      <nav class="nav">
+        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
+        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
+        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
+        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
+        <a href="artifacts.html" data-navicon="artifacts">Реестр <span class="badge">IV</span></a>
+        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
+        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
+        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
+        <a href="changelog.html" data-navicon="changelog">Журнал <span class="badge">LOG</span></a>
+        <a href="heresy.html" data-navicon="heresy">Ересь <span class="badge">ERR</span></a>
+        <a href="people.html" data-navicon="people">Персоны <span class="badge">ID</span></a>
+        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      </nav>
+
+      <div class="footer">
+        <div><span class="kbd">v1.0.0</span> • STATUS: <b>VERIFIED</b></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="header" data-stamp="SECTION II • VERIFIED">
+        <h2>Раздел II — Светлая и Тёмная стороны</h2>
+        <div class="meta">
+          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
+          <div class="pill"><strong>CODE:</strong> II</div>
+        </div>
+      </div>
+
+      <h3 data-article="II-1">Статья II-1. Определение</h3>
+      <p>
+        Светлая и Тёмная стороны рассматриваются как устойчивые этические и психические траектории применения Силы.
+        Сила едина по природе. Различие сторон определяется мотивами, методами и последствиями применения.
+      </p>
+
+      <h3 data-article="II-2">Идентификация сторон (маркеры)</h3>
+
+      <div class="faction jedi">
+        <div class="icon" data-sigil="jedi"></div>
+        <div>
+          <h4>Светлая сторона (Орден джедаев)</h4>
+          <p>Самоконтроль, ответственность, защита жизни. Применение через дисциплину.</p>
+          <span class="tag">MARKER: JEDI ORDER</span>
+        </div>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <div class="faction sith">
+        <div class="icon" data-sigil="sith"></div>
+        <div>
+          <h4>Тёмная сторона (Орден ситхов)</h4>
+          <p>Доминирование, ускорение через эмоции. Цена применения обязательна.</p>
+          <span class="tag">MARKER: SITH ORDER</span>
+        </div>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <div class="faction grey">
+        <div class="icon" data-sigil="grey"></div>
+        <div>
+          <h4>Серый путь (доктрина)</h4>
+          <p>Прагматизм в рамках этики. Ненависть/садизм трактуются как дрейф в Тьму.</p>
+          <span class="tag">MARKER: GREY DOCTRINE</span>
+        </div>
+      </div>
+
+      <h3 data-article="II-3">Статья II-3. Светлая сторона</h3>
+      <p>
+        Светлая сторона определяется приоритетом минимизации вреда, контролем эмоций и ответственностью за последствия.
+        Применение ориентировано на защиту и де-эскалацию.
+      </p>
+
+      <h3 data-article="II-4">Статья II-4. Тёмная сторона</h3>
+      <p>
+        Тёмная сторона определяется приоритетом доминирования и снижением значимости последствий для других.
+        Практики Тьмы предполагают системный рост цены для пользователя.
+      </p>
+
+      <h3 data-article="II-5">Статья II-5. Проявления и последствия</h3>
+      <table class="table">
+        <thead><tr><th>Состояние</th><th>Применения</th><th>Последствия</th></tr></thead>
+        <tbody>
+          <tr><td>Свет</td><td>защита, стабилизация, поддержка, дипломатия</td><td>рост медленнее, выше требования к дисциплине</td></tr>
+          <tr><td>Тьма</td><td>подавление, разрушение, контроль через страх</td><td>зависимость, деградация эмпатии, риск срыва</td></tr>
+          <tr><td>Серый</td><td>прагматичные меры, нестандартная защита</td><td>риск дрейфа в Тьму при ошибке мотивов</td></tr>
+        </tbody>
+      </table>
+
+      <div class="footer">
+        <div>NEXT: <a href="orders.html">Раздел III — Ордена и учения</a></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/script.js"></script>
+  <script src="../assets/search.js"></script>
+</body>
+</html>
