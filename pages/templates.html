@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Шаблоны — Кодекс Силы</title>
+  <meta name="description" content="Шаблоны для добавления новых статей, артефактов, персоналий и записей в лог." />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html" aria-current="page"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
+      </nav>
+
+      <div class="footer">
+        TEMPLATES • CONTRIBUTION KIT
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="header reveal" data-stamp="TPL • STANDARD FORMS">
+        <h2>Шаблоны</h2>
+        <div class="meta">
+          <span class="pill ok"><strong>ЦЕЛЬ:</strong> Быстрое добавление канона</span>
+          <span class="pill"><strong>ПРАВИЛО:</strong> Только через LOG</span>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="callout">
+          Используй эти формы для предложений. После утверждения данные переносятся в соответствующие разделы.
+        </div>
+
+        <h3 id="tpl-article">TPL-A. Новая статья <a class="anchor" href="#tpl-article">#</a></h3>
+        <div class="card">
+          <p>
+            <strong>ID:</strong> (например, III-6)<br/>
+            <strong>Заголовок:</strong><br/>
+            <strong>Текст нормы:</strong><br/>
+            <strong>Определения/термины:</strong><br/>
+            <strong>Последствия/санкции:</strong><br/>
+            <strong>Ссылки:</strong> (на связанные статьи/реестр)
+          </p>
+        </div>
+
+        <h3 id="tpl-artifact">TPL-B. Новый артефакт <a class="anchor" href="#tpl-artifact">#</a></h3>
+        <div class="card">
+          <p>
+            <strong>ID:</strong> (AR-### / CR-###)<br/>
+            <strong>Название:</strong><br/>
+            <strong>Происхождение:</strong><br/>
+            <strong>Эффект:</strong><br/>
+            <strong>Ограничения:</strong><br/>
+            <strong>Риски:</strong><br/>
+            <strong>Как добывается:</strong>
+          </p>
+        </div>
+
+        <h3 id="tpl-person">TPL-C. Персона / фигура <a class="anchor" href="#tpl-person">#</a></h3>
+        <div class="card">
+          <p>
+            <strong>Имя:</strong><br/>
+            <strong>Орден/принадлежность:</strong><br/>
+            <strong>Статус:</strong> жив/погиб/неизвестно<br/>
+            <strong>Роль в каноне:</strong><br/>
+            <strong>Источник:</strong> (какая статья/событие закрепляет)
+          </p>
+        </div>
+
+        <h3 id="tpl-log">TPL-D. Запись в LOG <a class="anchor" href="#tpl-log">#</a></h3>
+        <div class="card">
+          <p>
+            <strong>Версия:</strong> vX.Y.Z<br/>
+            <strong>Дата вступления:</strong><br/>
+            <strong>Что изменено:</strong><br/>
+            <strong>Кто утвердил:</strong><br/>
+            <strong>Ссылки:</strong> на статьи/страницы/прецеденты
+          </p>
+        </div>
+
+        <div class="footer">
+          NEXT: FAQ • <a href="./faq.html">OPEN</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
