@@ -58,9 +58,9 @@
   // -----------------------------
   // Typography
   // -----------------------------
-  const FONT_PX = 30;
-  const ROW_H = 38;
-  const COL_W = 48;
+  const FONT_PX = 18;
+  const ROW_H = 22;
+  const COL_W = 22;
 
   function setFont(targetCtx) {
     (targetCtx || ctx).font =
@@ -507,3 +507,4 @@
       start();
     });
 })();
+
