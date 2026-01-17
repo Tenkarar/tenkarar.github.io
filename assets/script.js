@@ -1,174 +1,163 @@
 /* ============================================================
-   HOLO-NET UI SCRIPT
-   - Archive mode toggle (reduces motion + readability)
-   - Ctrl+K opens search (handled by search.js, here we toggle)
-   - Smooth anchor highlight on hash navigation
-   - Timeline accordion support (.tl-item)
-   - Reveal-in animations: add 'reveal-in' to key blocks as they enter view
+   FORCE CODEX — UI SCRIPT (FIXED)
+   - гарантированно раскрывает .reveal секции (иначе страницы "пустые")
+   - archive mode toggle
+   - search open/close (works with assets/search.js if exists)
+   - timeline expand/collapse
+   - anchor copy helper
    ============================================================ */
 
 (function () {
   "use strict";
 
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const $ = (q, root = document) => root.querySelector(q);
+  const $$ = (q, root = document) => Array.from(root.querySelectorAll(q));
 
-  // ----------------------------
-  // Archive mode
-  // ----------------------------
-  const html = document.documentElement;
+  // -----------------------------
+  // ARCHIVE MODE
+  // -----------------------------
   const btnArchive = $("#btn-archive");
-  const ARCHIVE_KEY = "holonet_archive_mode";
+  const ARCHIVE_KEY = "forcecodex.archiveMode";
 
   function setArchiveMode(on) {
-    html.classList.toggle("archive-mode", on);
+    document.documentElement.classList.toggle("archive-mode", !!on);
     try { localStorage.setItem(ARCHIVE_KEY, on ? "1" : "0"); } catch (_) {}
-    if (btnArchive) btnArchive.textContent = on ? "LIVE MODE" : "ARCHIVE MODE";
   }
 
-  function initArchiveMode() {
+  (function initArchiveMode() {
     let saved = "0";
     try { saved = localStorage.getItem(ARCHIVE_KEY) || "0"; } catch (_) {}
     setArchiveMode(saved === "1");
-  }
+  })();
 
   if (btnArchive) {
     btnArchive.addEventListener("click", () => {
-      setArchiveMode(!html.classList.contains("archive-mode"));
+      const on = !document.documentElement.classList.contains("archive-mode");
+      setArchiveMode(on);
     });
   }
-  initArchiveMode();
 
-  // ----------------------------
-  // Search open / close hook
-  // search.js creates #search-modal, but we provide shortcuts & button wiring
-  // ----------------------------
+  // -----------------------------
+  // SEARCH
+  // -----------------------------
   const btnSearch = $("#btn-search");
 
   function openSearch() {
-    const modal = $("#search-modal");
-    if (!modal) return;
-    modal.classList.add("open");
-    const input = $("#search-input", modal) || $("#search-input");
-    if (input) input.focus();
+    if (window.ForceCodexSearch && typeof window.ForceCodexSearch.open === "function") {
+      window.ForceCodexSearch.open();
+      return;
+    }
+    const inp = $("#search-input");
+    if (inp) inp.focus();
   }
 
   function closeSearch() {
-    const modal = $("#search-modal");
-    if (!modal) return;
-    modal.classList.remove("open");
+    if (window.ForceCodexSearch && typeof window.ForceCodexSearch.close === "function") {
+      window.ForceCodexSearch.close();
+    }
   }
 
   if (btnSearch) btnSearch.addEventListener("click", openSearch);
 
   document.addEventListener("keydown", (e) => {
     const isMac = navigator.platform.toLowerCase().includes("mac");
-    const ctrlOrCmd = isMac ? e.metaKey : e.ctrlKey;
-
-    // Ctrl/Cmd + K
-    if (ctrlOrCmd && e.key.toLowerCase() === "k") {
+    const cmdk = (isMac ? e.metaKey : e.ctrlKey) && e.key.toLowerCase() === "k";
+    if (cmdk) {
       e.preventDefault();
       openSearch();
       return;
     }
-
-    // Escape closes search
-    if (e.key === "Escape") {
-      closeSearch();
-    }
+    if (e.key === "Escape") closeSearch();
   });
 
-  // click on overlay closes search (if exists)
-  document.addEventListener("click", (e) => {
-    const modal = $("#search-modal");
-    if (!modal || !modal.classList.contains("open")) return;
-    if (e.target === modal) closeSearch();
-  });
-
-  // ----------------------------
-  // Anchor highlight on navigation
-  // ----------------------------
-  function highlightAnchor() {
-    const hash = decodeURIComponent(location.hash || "");
-    if (!hash || hash.length < 2) return;
-
-    const el = document.getElementById(hash.slice(1));
-    if (!el) return;
-
-    el.classList.add("flash");
-    window.setTimeout(() => el.classList.remove("flash"), 900);
-
-    // align nicely under header
-    try {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    } catch (_) {}
-  }
-
-  window.addEventListener("hashchange", highlightAnchor);
-  // initial
-  window.setTimeout(highlightAnchor, 250);
-
-  // ----------------------------
-  // Timeline accordion (.tl-item)
-  // ----------------------------
-  $$(".tl-item").forEach((item) => {
-    const head = $(".tl-head", item) || item;
-    head.addEventListener("click", () => {
-      const open = item.getAttribute("data-open") === "true";
-      item.setAttribute("data-open", open ? "false" : "true");
-      item.classList.toggle("open", !open);
-    });
-  });
-
-  // ----------------------------
-  // Reveal animation on scroll
-  // We only apply to selected blocks so it stays light.
-  // Requires CSS for .reveal-in (already used in your styles.css previously)
-  // ----------------------------
-  const targets = [
+  // -----------------------------
+  // REVEAL (FIXED)
+  // - ОБЯЗАТЕЛЬНО включаем .reveal секции!
+  // -----------------------------
+  const revealEls = Array.from(new Set([
+    ...$$(".reveal"),              // <-- критично: секции-контейнеры
     ...$$(".header"),
     ...$$(".card"),
     ...$$(".table"),
     ...$$(".callout"),
     ...$$(".faction"),
     ...$$(".timeline"),
-    ...$$(".tl-item"),
     ...$$(".verdict"),
-  ];
+    ...$$(".tl-item"),
+    ...$$(".hr"),
+  ]));
 
-  // Add base class so CSS can animate from it
-  targets.forEach((el) => el.classList.add("reveal-in"));
+  function show(el) {
+    el.classList.add("reveal-in");
+  }
+
+  // аварийное раскрытие, чтобы НИКОГДА не было "пусто"
+  function forceShowAll() {
+    revealEls.forEach(show);
+  }
 
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((ent) => {
+        for (const ent of entries) {
           if (ent.isIntersecting) {
-            ent.target.classList.add("in");
+            show(ent.target);
             io.unobserve(ent.target);
           }
-        });
+        }
       },
-      { root: null, threshold: 0.12 }
+      { threshold: 0.10, rootMargin: "120px 0px" }
     );
 
-    targets.forEach((el) => io.observe(el));
+    revealEls.forEach((el) => io.observe(el));
+
+    // если вдруг что-то не сработало (шрифты/лаг/особые настройки) — раскрыть через 700мс
+    setTimeout(forceShowAll, 700);
   } else {
-    // fallback: mark all as visible
-    targets.forEach((el) => el.classList.add("in"));
+    forceShowAll();
   }
 
-  // ----------------------------
-  // Optional: subtle nav active effect (no CSS dependency)
-  // ----------------------------
-  const nav = $(".nav");
-  if (nav) {
-    nav.addEventListener("click", (e) => {
-      const a = e.target.closest("a");
-      if (!a) return;
-      // keep instant UI feedback even before navigation
-      a.classList.add("clicked");
-      setTimeout(() => a.classList.remove("clicked"), 220);
+  // -----------------------------
+  // TIMELINE TOGGLE
+  // -----------------------------
+  $$(".tl-item").forEach((item) => {
+    const head = $(".tl-head", item);
+    if (!head) return;
+
+    head.setAttribute("role", "button");
+    head.setAttribute("tabindex", "0");
+
+    function toggle() {
+      const open = item.getAttribute("data-open") === "true";
+      item.setAttribute("data-open", open ? "false" : "true");
+      item.classList.toggle("open", !open);
+    }
+
+    head.addEventListener("click", toggle);
+    head.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
     });
-  }
+  });
+
+  // -----------------------------
+  // ANCHOR COPY (optional)
+  // -----------------------------
+  $$(".anchor").forEach((a) => {
+    a.addEventListener("click", async () => {
+      const href = a.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
+
+      const url = window.location.origin + window.location.pathname + href;
+
+      try {
+        await navigator.clipboard.writeText(url);
+        a.classList.add("copied");
+        setTimeout(() => a.classList.remove("copied"), 700);
+      } catch (_) {}
+    });
+  });
+
 })();
