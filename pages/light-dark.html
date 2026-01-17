@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Свет и Тьма — Архив Голонета</title>
-  <link rel="stylesheet" href="../assets/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Светлая и Тёмная стороны — Кодекс Силы</title>
+  <meta name="description" content="Определения Светлой и Тёмной сторон: философия, проявления и последствия." />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
   <canvas id="bg-canvas"></canvas>
   <div class="holo-overlay"></div>
@@ -15,117 +17,147 @@
       <div class="brand">
         <div class="sigil" aria-hidden="true"></div>
         <div>
-          <h1>Кодекс Силы</h1>
-          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
         </div>
       </div>
 
       <div class="sidebar-controls">
         <button class="btn" id="btn-search" type="button">SEARCH</button>
-        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
-        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
       </div>
 
-      <div class="hr"></div>
-
-      <nav class="nav">
-        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
-        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
-        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
-        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
-        <a href="artifacts.html" data-navicon="artifacts">Реестр <span class="badge">IV</span></a>
-        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
-        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
-        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
-        <a href="changelog.html" data-navicon="changelog">Журнал <span class="badge">LOG</span></a>
-        <a href="heresy.html" data-navicon="heresy">Ересь <span class="badge">ERR</span></a>
-        <a href="people.html" data-navicon="people">Персоны <span class="badge">ID</span></a>
-        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html" aria-current="page"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
       </nav>
 
       <div class="footer">
-        <div><span class="kbd">v1.0.0</span> • STATUS: <b>VERIFIED</b></div>
+        SECTION: III • SIDES<br />
+        RULE: CONSEQUENCES APPLY
       </div>
     </aside>
 
     <main class="main">
-      <div class="header" data-stamp="SECTION II • VERIFIED">
-        <h2>Раздел II — Светлая и Тёмная стороны</h2>
+      <section class="header reveal" data-stamp="VERIFIED • SECTION III • ETHICS">
+        <h2>Светлая и Тёмная стороны</h2>
         <div class="meta">
-          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
-          <div class="pill"><strong>CODE:</strong> II</div>
+          <span class="pill ok"><strong>СТАТУС:</strong> VERIFIED</span>
+          <span class="pill"><strong>РАЗДЕЛ:</strong> III</span>
+          <span class="pill danger"><strong>ПРЕДУПРЕЖДЕНИЕ:</strong> тёмные практики оставляют след</span>
         </div>
-      </div>
+      </section>
 
-      <h3 data-article="II-1">Статья II-1. Определение</h3>
-      <p>
-        Светлая и Тёмная стороны рассматриваются как устойчивые этические и психические траектории применения Силы.
-        Сила едина по природе. Различие сторон определяется мотивами, методами и последствиями применения.
-      </p>
-
-      <h3 data-article="II-2">Идентификация сторон (маркеры)</h3>
-
-      <div class="faction jedi">
-        <div class="icon" data-sigil="jedi"></div>
-        <div>
-          <h4>Светлая сторона (Орден джедаев)</h4>
-          <p>Самоконтроль, ответственность, защита жизни. Применение через дисциплину.</p>
-          <span class="tag">MARKER: JEDI ORDER</span>
+      <section class="reveal">
+        <div class="callout">
+          Сторона — это не “скин” и не “цвет”. Это <strong>путь</strong> обращения с Силой и этика принятия решений.
+          Сторона влияет на допустимые практики, последствия и трактовку событий (II, IV, VII).
         </div>
-      </div>
 
-      <div style="height:10px"></div>
+        <div class="grid">
+          <div class="faction jedi">
+            <div class="icon" aria-hidden="true">⚔</div>
+            <div>
+              <h4>Светлая сторона</h4>
+              <p>Самоконтроль, служение, отказ от культивации ненависти как источника силы.</p>
+              <span class="tag">DOCTRINE: LIGHT</span>
+            </div>
+          </div>
 
-      <div class="faction sith">
-        <div class="icon" data-sigil="sith"></div>
-        <div>
-          <h4>Тёмная сторона (Орден ситхов)</h4>
-          <p>Доминирование, ускорение через эмоции. Цена применения обязательна.</p>
-          <span class="tag">MARKER: SITH ORDER</span>
+          <div class="faction sith">
+            <div class="icon" aria-hidden="true">⟠</div>
+            <div>
+              <h4>Тёмная сторона</h4>
+              <p>Сила через страсть, страх, ненависть и доминирование; быстрый рост ценой деградации.</p>
+              <span class="tag">DOCTRINE: DARK</span>
+            </div>
+          </div>
+
+          <div class="faction grey">
+            <div class="icon" aria-hidden="true">⟁</div>
+            <div>
+              <h4>Позиция “серых”</h4>
+              <p>Прагматика и баланс методов без легализации тёмного пути. Тьма не “бесплатна”.</p>
+              <span class="tag">DOCTRINE: BALANCE</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Каноническая рамка</h4>
+            <p>
+              Допустимы разные стили персонажей, но последствия и запреты применяются одинаково ко всем.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div style="height:10px"></div>
+        <h3 id="article-iii-1">III-1. Определения сторон <a class="anchor" href="#article-iii-1">#</a></h3>
+        <table class="table">
+          <thead><tr><th>Сторона</th><th>Критерий</th><th>Практическая рамка</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Свет</strong></td>
+              <td>контроль, сострадание, ответственность</td>
+              <td>запрет на культивацию ненависти как топлива</td>
+            </tr>
+            <tr>
+              <td><strong>Тьма</strong></td>
+              <td>страсть, власть, подчинение</td>
+              <td>ускорение силы ценой психических/социальных последствий</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <div class="faction grey">
-        <div class="icon" data-sigil="grey"></div>
-        <div>
-          <h4>Серый путь (доктрина)</h4>
-          <p>Прагматизм в рамках этики. Ненависть/садизм трактуются как дрейф в Тьму.</p>
-          <span class="tag">MARKER: GREY DOCTRINE</span>
+        <h3 id="article-iii-2">III-2. Практические проявления <a class="anchor" href="#article-iii-2">#</a></h3>
+        <ul class="list">
+          <li><strong>Свет:</strong> защитные техники, контроль, дипломатия, минимизация вреда.</li>
+          <li><strong>Тьма:</strong> подавление, принуждение, силовые пытки, разрушительные выбросы.</li>
+        </ul>
+
+        <h3 id="article-iii-3">III-3. Последствия (обязательная часть канона) <a class="anchor" href="#article-iii-3">#</a></h3>
+        <p>
+          Использование тёмных практик может давать быстрый эффект, но фиксирует последствия:
+          рост агрессии, зависимость от “топлива” эмоций, потеря доверия, уязвимость к манипуляции.
+          В РП это выражается через решения мастеров/совета (VII) и ограничения орденов (IV).
+        </p>
+
+        <h3 id="article-iii-4">III-4. Запрещённые злоупотребления <a class="anchor" href="#article-iii-4">#</a></h3>
+        <ul class="list">
+          <li><strong>Мета-абьюз:</strong> “я чувствую всё всегда” без условий и цены — запрещено.</li>
+          <li><strong>Абсолютные эффекты:</strong> “контроль разума навсегда”, “убийство взглядом без защиты” — запрещено без сюжетного основания.</li>
+          <li><strong>Бесконечные ресурсы:</strong> “могу спамить мощные техники” — запрещено (II-4).</li>
+        </ul>
+
+        <h3 id="article-iii-5">III-5. Серые: границы <a class="anchor" href="#article-iii-5">#</a></h3>
+        <p>
+          Серые допускают прагматичный подход, но <strong>не легализуют</strong> культивацию ненависти.
+          Если персонаж регулярно использует тёмные практики как основу — это трактуется как дрейф к Тьме.
+        </p>
+
+        <div class="verdict" id="verdict-sides-1">
+          <strong>РЕШЕНИЕ СОВЕТА КАНОНА:</strong><br />
+          Тёмная сторона — это не “набор способностей”, а режим этики и последствий. Любая тёмная практика учитывается при дальнейших решениях (VII).
         </div>
-      </div>
 
-      <h3 data-article="II-3">Статья II-3. Светлая сторона</h3>
-      <p>
-        Светлая сторона определяется приоритетом минимизации вреда, контролем эмоций и ответственностью за последствия.
-        Применение ориентировано на защиту и де-эскалацию.
-      </p>
-
-      <h3 data-article="II-4">Статья II-4. Тёмная сторона</h3>
-      <p>
-        Тёмная сторона определяется приоритетом доминирования и снижением значимости последствий для других.
-        Практики Тьмы предполагают системный рост цены для пользователя.
-      </p>
-
-      <h3 data-article="II-5">Статья II-5. Проявления и последствия</h3>
-      <table class="table">
-        <thead><tr><th>Состояние</th><th>Применения</th><th>Последствия</th></tr></thead>
-        <tbody>
-          <tr><td>Свет</td><td>защита, стабилизация, поддержка, дипломатия</td><td>рост медленнее, выше требования к дисциплине</td></tr>
-          <tr><td>Тьма</td><td>подавление, разрушение, контроль через страх</td><td>зависимость, деградация эмпатии, риск срыва</td></tr>
-          <tr><td>Серый</td><td>прагматичные меры, нестандартная защита</td><td>риск дрейфа в Тьму при ошибке мотивов</td></tr>
-        </tbody>
-      </table>
-
-      <div class="footer">
-        <div>NEXT: <a href="orders.html">Раздел III — Ордена и учения</a></div>
-      </div>
+        <div class="footer">
+          NEXT: Раздел IV — Ордена • <a href="./orders.html">OPEN</a>
+        </div>
+      </section>
     </main>
   </div>
 
   <script src="../assets/bg.js"></script>
-  <script src="../assets/script.js"></script>
   <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
