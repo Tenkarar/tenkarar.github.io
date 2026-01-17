@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Природа Силы — Архив Голонета</title>
-  <link rel="stylesheet" href="../assets/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Природа Силы — Кодекс Силы</title>
+  <meta name="description" content="Единая трактовка природы Силы: что это, откуда берётся, как работает." />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
   <canvas id="bg-canvas"></canvas>
   <div class="holo-overlay"></div>
@@ -15,91 +17,118 @@
       <div class="brand">
         <div class="sigil" aria-hidden="true"></div>
         <div>
-          <h1>Кодекс Силы</h1>
-          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
         </div>
       </div>
 
       <div class="sidebar-controls">
         <button class="btn" id="btn-search" type="button">SEARCH</button>
-        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
-        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
       </div>
 
-      <div class="hr"></div>
-
-      <nav class="nav">
-        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
-        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
-        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
-        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
-        <a href="artifacts.html" data-navicon="artifacts">Реестр <span class="badge">IV</span></a>
-        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
-        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
-        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
-        <a href="changelog.html" data-navicon="changelog">Журнал <span class="badge">LOG</span></a>
-        <a href="heresy.html" data-navicon="heresy">Ересь <span class="badge">ERR</span></a>
-        <a href="people.html" data-navicon="people">Персоны <span class="badge">ID</span></a>
-        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html" aria-current="page"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
       </nav>
 
       <div class="footer">
-        <div><span class="kbd">v1.0.0</span> • STATUS: <b>VERIFIED</b></div>
+        SECTION: II • NATURE<br />
+        STANDARD: SINGLE INTERPRETATION
       </div>
     </aside>
 
     <main class="main">
-      <div class="header" data-stamp="SECTION I • VERIFIED">
-        <h2>Раздел I — Природа Силы</h2>
+      <section class="header reveal" data-stamp="VERIFIED • SECTION II • DOCTRINE">
+        <h2>Природа Силы</h2>
         <div class="meta">
-          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
-          <div class="pill"><strong>CODE:</strong> I</div>
+          <span class="pill ok"><strong>СТАТУС:</strong> VERIFIED</span>
+          <span class="pill"><strong>РАЗДЕЛ:</strong> II</span>
+          <span class="pill warn"><strong>ПРАВИЛО:</strong> единая трактовка</span>
         </div>
-      </div>
+      </section>
 
-      <h3 data-article="I-1">Статья I-1. Термин</h3>
-      <p>
-        <b>Сила</b> — универсальное поле взаимодействий, фиксируемое в рамках канона проекта как источник эффектов,
-        доступных пользователям Силы. Сила рассматривается как единая по природе.
-      </p>
+      <section class="reveal">
+        <div class="callout">
+          Этот раздел задаёт <strong>единую</strong> модель Силы в проекте. Любые “альтернативные теории”
+          допустимы только как внутриигровые гипотезы без механических преимуществ, пока не утверждены (VII, LOG).
+        </div>
 
-      <h3 data-article="I-2">Статья I-2. Чувствительность</h3>
-      <p>
-        <b>Чувствительность к Силе</b> — врождённая характеристика персонажа, определяющая допустимый диапазон
-        восприятия и применения. Тренировка влияет на качество контроля, но не отменяет ограничений без сюжетного основания.
-      </p>
+        <h3 id="article-ii-1">II-1. Определение <a class="anchor" href="#article-ii-1">#</a></h3>
+        <p>
+          <strong>Сила</strong> — связующее поле между живым, материей и сознанием.
+          Пользователь взаимодействует с ней через чувствительность, дисциплину и практики (обучение/опыт).
+        </p>
 
-      <h3 data-article="I-3">Статья I-3. Применение Силы</h3>
-      <p>
-        Любое применение Силы описывается тремя параметрами: <b>намерение</b>, <b>метод</b>, <b>последствия</b>.
-        При отсутствии согласования последствий применяется принцип: «чем выше вмешательство, тем выше цена и риск».
-      </p>
+        <h3 id="article-ii-2">II-2. Источник и происхождение <a class="anchor" href="#article-ii-2">#</a></h3>
+        <p>
+          Сила не “создаётся” пользователем и не является ресурсом, который можно бесконечно накапливать.
+          Она проявляется через живое и резонанс с окружением. Практики лишь <strong>настраивают</strong> и <strong>фокусируют</strong> взаимодействие.
+        </p>
 
-      <h3 data-article="I-4">Статья I-4. Узлы Силы</h3>
-      <p>
-        <b>Узел Силы</b> — место повышенной активности, способное усиливать восприятие (видения, эмпатия) и осложнять
-        контроль (искажения, эмоциональный фон). Узел не отменяет цену применения.
-      </p>
+        <h3 id="article-ii-3">II-3. Механика взаимодействия <a class="anchor" href="#article-ii-3">#</a></h3>
+        <div class="grid">
+          <div class="card">
+            <h4>Чувствительность</h4>
+            <p>Врождённая/развитая восприимчивость. Определяет “порог” для освоения техник.</p>
+          </div>
+          <div class="card">
+            <h4>Дисциплина</h4>
+            <p>Контроль внимания, эмоций и импульсов. Определяет стабильность и безопасность.</p>
+          </div>
+          <div class="card">
+            <h4>Практика</h4>
+            <p>Тренировка/наставничество/ритуал. Определяет эффективность и воспроизводимость.</p>
+          </div>
+          <div class="card">
+            <h4>Цена воздействия</h4>
+            <p>Любая сильная техника несёт риск, усталость или последствия (особенно при тёмных практиках).</p>
+          </div>
+        </div>
 
-      <h3 data-article="I-5">Статья I-5. Запреты на лом канона</h3>
-      <table class="table">
-        <thead><tr><th>Запрещено</th><th>Формулировка</th><th>Примечание</th></tr></thead>
-        <tbody>
-          <tr><td>Абсолютная универсальность</td><td>«персонаж может всё» без ограничений</td><td>несовместимо с балансом</td></tr>
-          <tr><td>Мгновенный рост</td><td>ранг/сила без обучения</td><td>только как утверждённое исключение</td></tr>
-          <tr><td>Свободное воскрешение</td><td>жизнь без цены/риска</td><td>только по решению Совета Канона</td></tr>
-          <tr><td>Бесплатный контроль воли</td><td>подчинение без последствий</td><td>вмешательство требует цены</td></tr>
-        </tbody>
-      </table>
+        <h3 id="article-ii-4">II-4. Ограничения <a class="anchor" href="#article-ii-4">#</a></h3>
+        <ul class="list">
+          <li><strong>Нет “всемогущества”.</strong> Любая заявка требует основания: обучение (IV), сторона (III), артефакт (V), прецедент (VII).</li>
+          <li><strong>Нет бесплатных чудес.</strong> Чем мощнее эффект, тем выше цена: риск, откат, последствия для персонажа или сюжета.</li>
+          <li><strong>Конфликт физики и сюжета решается каноном.</strong> Если действие ломает баланс игры — применяется VII.</li>
+        </ul>
 
-      <div class="footer">
-        <div>NEXT: <a href="light-dark.html">Раздел II — Свет и Тьма</a></div>
-      </div>
+        <h3 id="article-ii-5">II-5. Классы техник (каталог) <a class="anchor" href="#article-ii-5">#</a></h3>
+        <table class="table">
+          <thead><tr><th>Класс</th><th>Примеры</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>Восприятие</td><td>чутьё, предвидение, эмпатия</td><td>не даёт абсолютных “спойлеров”</td></tr>
+            <tr><td>Контроль</td><td>медитация, подавление боли</td><td>требует дисциплины, ограничено состоянием</td></tr>
+            <tr><td>Воздействие</td><td>толчок, притяжение, удержание</td><td>зависит от массы/дистанции/концентрации</td></tr>
+            <tr><td>Ритуал</td><td>печати, длительные практики</td><td>долго, сюжетно, с условиями</td></tr>
+          </tbody>
+        </table>
+
+        <div class="verdict" id="verdict-nature-1">
+          <strong>РЕШЕНИЕ СОВЕТА КАНОНА:</strong><br />
+          Любая трактовка “как работает Сила” должна быть совместима с II-1—II-4; иначе она неканонична до утверждения (VII).
+        </div>
+
+        <div class="footer">
+          NEXT: Раздел III — Свет / Тьма • <a href="./light-dark.html">OPEN</a>
+        </div>
+      </section>
     </main>
   </div>
 
   <script src="../assets/bg.js"></script>
-  <script src="../assets/script.js"></script>
   <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
