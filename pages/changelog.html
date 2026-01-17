@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Журнал изменений — Кодекс Силы</title>
+  <meta name="description" content="Версии, даты вступления в силу, принятые правки и решения." />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html" aria-current="page"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
+      </nav>
+
+      <div class="footer">
+        LOGBOOK • IMMUTABLE RECORD<br />
+        RULE: NO UNLOGGED CHANGES
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="header reveal" data-stamp="LOG • VERSIONING ENABLED">
+        <h2>Журнал изменений</h2>
+        <div class="meta">
+          <span class="pill ok"><strong>ПРАВИЛО:</strong> Любая правка фиксируется</span>
+          <span class="pill"><strong>ФОРМАТ:</strong> SemVer (v1.0.0)</span>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="callout">
+          Это единственный источник “когда и что поменялось”. Если правки нет в LOG — её не существует.
+        </div>
+
+        <h3 id="log-v1-0-0">v1.0.0 — Базовый выпуск <a class="anchor" href="#log-v1-0-0">#</a></h3>
+        <table class="table">
+          <thead><tr><th>Дата</th><th>Изменения</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td>22 BBY</td><td>Создание каркаса разделов I–VII, реестр V (образцы), процедуры VII</td><td>VERIFIED</td></tr>
+          </tbody>
+        </table>
+
+        <h3 id="log-template">Шаблон записи <a class="anchor" href="#log-template">#</a></h3>
+        <div class="card">
+          <p>
+            <strong>vX.Y.Z</strong> — короткое имя • дата вступления в силу • список статей/страниц • кто утвердил • ссылки на прецеденты.
+          </p>
+        </div>
+
+        <div class="footer">
+          NEXT: Ересь и мифы • <a href="./heresy.html">OPEN</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
