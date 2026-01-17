@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Свод норм Республики — Архив Голонета</title>
-  <link rel="stylesheet" href="../assets/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Кодекс / Закон Республики — Кодекс Силы</title>
+  <meta name="description" content="Нормы, запреты, процедуры и санкции. Юридическая модель канона." />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
+  <canvas id="bg-canvas"></canvas>
   <div class="holo-overlay"></div>
 
   <div class="container">
@@ -14,105 +17,94 @@
       <div class="brand">
         <div class="sigil" aria-hidden="true"></div>
         <div>
-          <h1>Кодекс Силы</h1>
-          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
-        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
-        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
-        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
-        <a href="artifacts.html" data-navicon="artifacts">Артефакты и кристаллы <span class="badge">IV</span></a>
-        <a href="chronology.html" data-navicon="chrono">История и хронология <span class="badge">V</span></a>
-        <a href="law.html" data-navicon="law">Свод норм Республики <span class="badge">LAW</span></a>
-        <a href="faq.html" data-navicon="faq">FAQ и толкования <span class="badge">FAQ</span></a>
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html" aria-current="page"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
       </nav>
 
-
       <div class="footer">
-        <div><span class="kbd">v1.0</span> • STATUS: <b>VERIFIED</b></div>
+        SECTION: VII • LAW<br />
+        AUTHORITY: CANON COUNCIL
       </div>
     </aside>
 
     <main class="main">
-      <div class="header">
-        <h2>LAW — Свод норм Республики</h2>
+      <section class="header reveal" data-stamp="VERIFIED • SECTION VII • PROCEDURE">
+        <h2>Кодекс / Закон Республики</h2>
         <div class="meta">
-          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
-          <div class="pill"><strong>CODE:</strong> LAW</div>
+          <span class="pill ok"><strong>СТАТУС:</strong> VERIFIED</span>
+          <span class="pill"><strong>ФОРМАТ:</strong> Закон / процедура</span>
+          <span class="pill warn"><strong>ИСПОЛНЕНИЕ:</strong> обязательно в РП</span>
         </div>
-      </div>
+      </section>
 
-      <h3>LAW-1. Верховенство Кодекса</h3>
-      <p>
-        Кодекс имеет высшую силу в проекте. Внутренние правила фракций и сюжетов применяются только если
-        не противоречат утверждённым статьям Кодекса.
-      </p>
+      <section class="reveal">
+        <div class="callout">
+          Раздел VII фиксирует <strong>процедуры</strong>: как трактовать нормы, как вносить изменения, как выносить решения.
+        </div>
 
-      <h3>LAW-2. Совет Канона</h3>
-      <p>
-        Совет Канона утверждает статьи, даёт толкования, фиксирует прецеденты, рассматривает апелляции и применяет санкции.
-      </p>
+        <h3 id="article-vii-1">VII-1. Иерархия источников <a class="anchor" href="#article-vii-1">#</a></h3>
+        <p>
+          При конфликте применяется порядок: (1) текст статьи, (2) определения, (3) лог (LOG),
+          (4) решения совета, (5) локальные правила орденов (IV).
+        </p>
 
-      <h3>LAW-3. Статусы статей</h3>
-      <table class="table">
-        <thead><tr><th>Статус</th><th>Кто присваивает</th><th>Когда действует</th></tr></thead>
-        <tbody>
-          <tr><td>DRAFT</td><td>автор/мастер</td><td>не применяется как канон</td></tr>
-          <tr><td>REVIEW</td><td>Совет Канона</td><td>временно, только по согласию сторон</td></tr>
-          <tr><td>VERIFIED</td><td>Совет Канона</td><td>с момента публикации версии</td></tr>
-          <tr><td>REVOKED</td><td>Совет Канона</td><td>не действует, хранится в архиве</td></tr>
-        </tbody>
-      </table>
+        <h3 id="article-vii-2">VII-2. Совет Канона <a class="anchor" href="#article-vii-2">#</a></h3>
+        <table class="table">
+          <thead><tr><th>Функция</th><th>Содержание</th></tr></thead>
+          <tbody>
+            <tr><td>Утверждение</td><td>Принятие новых статей/правок/реестра</td></tr>
+            <tr><td>Прецеденты</td><td>Решения по спорным трактовкам</td></tr>
+            <tr><td>Санкции</td><td>Ограничение спорных заявок/способностей</td></tr>
+          </tbody>
+        </table>
 
-      <h3>LAW-4. Процедура поправок</h3>
-      <p>
-        1) Подача предложения: текст, цель, риски, примеры применения.<br/>
-        2) Обсуждение и замечания (минимум один цикл).<br/>
-        3) Голосование Совета Канона.<br/>
-        4) Публикация новой версии и запись в журнал изменений.
-      </p>
+        <h3 id="article-vii-3">VII-3. Процедура изменения <a class="anchor" href="#article-vii-3">#</a></h3>
+        <p>
+          1) Предложение → 2) обсуждение → 3) текст правки → 4) голосование/утверждение → 5) запись в LOG → 6) вступление в силу.
+        </p>
 
-      <h3>LAW-5. Запрос толкования</h3>
-      <p>
-        При споре о смысле статьи подаётся запрос: описание сцены, применимые статьи, варианты трактовки и предлагаемый вывод.
-        Решение Совета Канона образует прецедент и добавляется в FAQ.
-      </p>
+        <h3 id="article-vii-4">VII-4. Санкции в РП <a class="anchor" href="#article-vii-4">#</a></h3>
+        <p>
+          Санкции — не “наказание игрока”, а стабилизация канона: откат действий, ограничение артефактов,
+          запрет некоторых практик, пересмотр заявок.
+        </p>
 
-      <h3>LAW-6. Нарушения и санкции</h3>
-      <table class="table">
-        <thead><tr><th>Нарушение</th><th>Пример</th><th>Санкция</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>Лом канона</td>
-            <td>«воскрешение без цены», «мгновенно стал мастером»</td>
-            <td>реткон сцены, предупреждение, корректировка билда</td>
-          </tr>
-          <tr>
-            <td>Обход реестра</td>
-            <td>ввод легендарного артефакта без утверждения</td>
-            <td>обнуление объекта, перевод в DRAFT, дисциплинарные меры</td>
-          </tr>
-          <tr>
-            <td>Злоупотребление властью в РП</td>
-            <td>принуждение без согласованных правил/цены</td>
-            <td>откат, ограничение прав на мастеринг, временный запрет</td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="verdict" id="verdict-law-1">
+          <strong>ПРЕЦЕДЕНТ:</strong><br />
+          “Сверхспособность” без статьи/реестра/обоснования признаётся недействительной до утверждения.
+        </div>
 
-      <div class="callout">
-        <strong>Принцип:</strong> санкции применяются для восстановления баланса игры и соблюдения канона.
-      </div>
-
-      <div class="footer">
-        <div>RELATED: <a href="faq.html">FAQ и толкования</a></div>
-      </div>
+        <div class="footer">
+          NEXT: LOG • <a href="./changelog.html">OPEN</a>
+        </div>
+      </section>
     </main>
   </div>
 
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/search.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>
