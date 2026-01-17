@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лица и фигуры — Кодекс Силы</title>
+  <meta name="description" content="Ключевые фигуры и статусы (жив/погиб/неизвестно) для канонической согласованности." />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="holo-overlay"></div>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="sigil" aria-hidden="true"></div>
+        <div>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
+        </div>
+      </div>
+
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html" aria-current="page"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
+      </nav>
+
+      <div class="footer">
+        DATABASE • PERSONNEL
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="header reveal" data-stamp="DB • CANON PERSONNEL">
+        <h2>Лица и фигуры</h2>
+        <div class="meta">
+          <span class="pill ok"><strong>СТАТУС:</strong> VERIFIED</span>
+          <span class="pill"><strong>ПРАВИЛО:</strong> Статусы фиксируются</span>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <div class="callout">
+          Здесь хранится “сводка” по ключевым персонажам/фракциям для избегания конфликтов.
+          Персоналии можно расширять через шаблоны и LOG.
+        </div>
+
+        <h3 id="db-1">DB-1. Реестр фигур (шаблонные записи) <a class="anchor" href="#db-1">#</a></h3>
+        <table class="table">
+          <thead><tr><th>Имя</th><th>Орден</th><th>Статус</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>—</td><td>Джедаи</td><td>—</td><td>Добавить через TPL</td></tr>
+            <tr><td>—</td><td>Ситхи</td><td>—</td><td>Добавить через TPL</td></tr>
+            <tr><td>—</td><td>Серые</td><td>—</td><td>Добавить через TPL</td></tr>
+          </tbody>
+        </table>
+
+        <div class="footer">
+          NEXT: Шаблоны • <a href="./templates.html">OPEN</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
