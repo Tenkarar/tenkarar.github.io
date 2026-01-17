@@ -228,7 +228,7 @@
 
     const count = Math.max(10, Math.floor(W / COL_W));
     for (let i = 0; i < count; i++) {
-      const len = Math.floor(rand(9, 16));
+      const len = Math.floor(rand(14, 28));
       const type = i % 3;
 
       const slots = new Array(len).fill(null).map(() => ({
@@ -240,7 +240,7 @@
         type,
         x: i * COL_W + rand(-10, 10),
         y: rand(-H, H),
-        speed: rand(0.20, 0.55) * (reduceMotion ? 0.55 : 1),
+        speed: rand(0.90, 2.20) * (reduceMotion ? 0.75 : 1),
         len,
         slots,
         wob: rand(0.003, 0.009),
@@ -377,7 +377,7 @@
 
       if (c.y - c.len * ROW_H > H + 90) {
         c.y = rand(-H * 0.95, -160);
-        c.speed = rand(0.20, 0.55) * (reduceMotion ? 0.55 : 1);
+        c.speed = rand(0.90, 2.20) * (reduceMotion ? 0.75 : 1);
       }
     }
 
@@ -507,4 +507,5 @@
       start();
     });
 })();
+
 
