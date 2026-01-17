@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>FAQ и толкования — Архив Голонета</title>
-  <link rel="stylesheet" href="../assets/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ — Кодекс Силы</title>
+  <meta name="description" content="Ответы на частые вопросы по канону, поиску, процедурам и решениям Совета." />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
+  <canvas id="bg-canvas"></canvas>
   <div class="holo-overlay"></div>
 
   <div class="container">
@@ -14,71 +17,68 @@
       <div class="brand">
         <div class="sigil" aria-hidden="true"></div>
         <div>
-          <h1>Кодекс Силы</h1>
-          <p>HOLO-NET ARCHIVE • Clone Wars</p>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
-        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
-        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
-        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
-        <a href="artifacts.html" data-navicon="artifacts">Артефакты и кристаллы <span class="badge">IV</span></a>
-        <a href="chronology.html" data-navicon="chrono">История и хронология <span class="badge">V</span></a>
-        <a href="law.html" data-navicon="law">Свод норм Республики <span class="badge">LAW</span></a>
-        <a href="faq.html" data-navicon="faq">FAQ и толкования <span class="badge">FAQ</span></a>
+      <div class="sidebar-controls">
+        <button class="btn" id="btn-search" type="button">SEARCH</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
+      </div>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html" aria-current="page"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
       </nav>
 
-
       <div class="footer">
-        <div><span class="kbd">v1.0</span> • STATUS: <b>VERIFIED</b></div>
+        HELP • FREQUENT QUESTIONS
       </div>
     </aside>
 
     <main class="main">
-      <div class="header">
-        <h2>FAQ — Толкования и прецеденты</h2>
+      <section class="header reveal" data-stamp="HELP • QUICK ANSWERS">
+        <h2>FAQ</h2>
         <div class="meta">
-          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
-          <div class="pill"><strong>PURPOSE:</strong> PRECEDENTS</div>
+          <span class="pill"><strong>ПОИСК:</strong> Ctrl K</span>
+          <span class="pill"><strong>ССЫЛКИ:</strong> якоря статей</span>
         </div>
-      </div>
+      </section>
 
-      <h3>Можно ли быть «серым» и использовать Тьму без последствий?</h3>
-      <p>
-        Нет. Серый путь не отменяет цену практик, относимых к Тёмной стороне.
-        Практики, подпитываемые ненавистью/садизмом/желанием доминировать, квалифицируются как уход в Тьму.
-      </p>
+      <section class="reveal">
+        <h3 id="faq-1">FAQ-1. Как ссылаться на статью? <a class="anchor" href="#faq-1">#</a></h3>
+        <p>Открой нужную статью и используй ссылку вида: <code>.../light-dark.html#article-iii-4</code>.</p>
 
-      <h3>Можно ли вводить новый артефакт «для сюжета»?</h3>
-      <p>
-        Да, только как DRAFT или как утверждённое сюжетное исключение по процедурам LAW-4 и LAW-5.
-        Без утверждения объект не считается каноном и не может менять баланс обязательным образом.
-      </p>
+        <h3 id="faq-2">FAQ-2. Как добавить новый артефакт/правку? <a class="anchor" href="#faq-2">#</a></h3>
+        <p>Через <a href="./templates.html#tpl-artifact">TPL-B</a> → обсуждение → утверждение → запись в <a href="./changelog.html">LOG</a>.</p>
 
-      <h3>Что важнее: логика игрока или статья Кодекса?</h3>
-      <p>
-        В споре применяется Кодекс (LAW-1). Логика игрока может стать основанием для поправки или официального толкования.
-      </p>
+        <h3 id="faq-3">FAQ-3. Почему мою способность откатили? <a class="anchor" href="#faq-3">#</a></h3>
+        <p>Потому что она не подтверждена статьёй/реестром/процедурой (см. <a href="./law.html#article-vii-1">VII-1</a>).</p>
 
-      <h3>Как добавить конкретные даты BBY/ABY?</h3>
-      <p>
-        Как поправку к Разделу V с таблицей дат и оценкой последствий для действующих сюжетов.
-        До утверждения дат применяется порядок и причинность событий.
-      </p>
+        <h3 id="faq-4">FAQ-4. Как отключить анимации? <a class="anchor" href="#faq-4">#</a></h3>
+        <p>Нажми <strong>ARCHIVE MODE</strong> в меню (для чтения и слабых устройств).</p>
 
-      <div class="callout">
-        <strong>Шаблон запроса толкования (LAW-5):</strong><br/>
-        Сцена → статьи → варианты трактовки → предлагаемое решение → почему это не ломает канон.
-      </div>
-
-      <div class="footer">
-        <div>Если вопрос не покрыт — подайте запрос толкования по LAW-5.</div>
-      </div>
+        <div class="footer">
+          RETURN: Главная • <a href="../index.html">OPEN</a>
+        </div>
+      </section>
     </main>
   </div>
 
+  <script src="../assets/bg.js"></script>
+  <script src="../assets/search.js"></script>
   <script src="../assets/script.js"></script>
 </body>
 </html>
