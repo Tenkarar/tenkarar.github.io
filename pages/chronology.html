@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>История и хронология — Архив Голонета</title>
-  <link rel="stylesheet" href="../assets/styles.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Артефакты и Кристаллы — Кодекс Силы</title>
+  <meta name="description" content="Официальный реестр артефактов: история, свойства, ограничения." />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
+
 <body>
   <canvas id="bg-canvas"></canvas>
   <div class="holo-overlay"></div>
@@ -15,118 +17,107 @@
       <div class="brand">
         <div class="sigil" aria-hidden="true"></div>
         <div>
-          <h1>Кодекс Силы</h1>
-          <p>HOLO-NET ARCHIVE • Timeline</p>
+          <h1>HOLO-NET ARCHIVE</h1>
+          <p>FORCE CODEX • VERIFIED</p>
         </div>
       </div>
 
       <div class="sidebar-controls">
         <button class="btn" id="btn-search" type="button">SEARCH</button>
-        <button class="btn" id="btn-archive" type="button" aria-pressed="false">ARCHIVE: OFF</button>
-        <button class="btn" id="btn-sound" type="button" aria-pressed="false">SOUND: OFF</button>
+        <button class="btn" id="btn-archive" type="button">ARCHIVE MODE</button>
+        <span class="kbd">Ctrl K</span>
       </div>
 
-      <nav class="nav" style="margin-top:10px;">
-        <a href="../index.html" data-navicon="home">Главная <span class="badge">HOME</span></a>
-        <a href="nature.html" data-navicon="force">Природа Силы <span class="badge">I</span></a>
-        <a href="light-dark.html" data-navicon="lightdark">Свет и Тьма <span class="badge">II</span></a>
-        <a href="orders.html" data-navicon="orders">Ордена и учения <span class="badge">III</span></a>
-        <a href="artifacts.html" data-navicon="artifacts">Артефакты и кристаллы <span class="badge">IV</span></a>
-        <a href="chronology.html" data-navicon="chrono">Хронология <span class="badge">V</span></a>
-        <a href="law.html" data-navicon="law">LAW <span class="badge">LAW</span></a>
-        <a href="faq.html" data-navicon="faq">FAQ <span class="badge">FAQ</span></a>
-
-        <div class="hr"></div>
-
-        <a href="changelog.html" data-navicon="changelog">Журнал изменений <span class="badge">LOG</span></a>
-        <a href="heresy.html" data-navicon="heresy">Ересь и мифы <span class="badge">X</span></a>
-        <a href="people.html" data-navicon="people">Фигуры канона <span class="badge">PPL</span></a>
-        <a href="templates.html" data-navicon="templates">Шаблоны <span class="badge">TPL</span></a>
+      <nav class="nav" aria-label="Навигация">
+        <a href="../index.html"><span class="navicon">⟡</span>Главная<span class="badge">I</span></a>
+        <a href="./nature.html"><span class="navicon">⌬</span>Природа Силы<span class="badge">II</span></a>
+        <a href="./light-dark.html"><span class="navicon">☼</span>Свет / Тьма<span class="badge">III</span></a>
+        <a href="./orders.html"><span class="navicon">⌁</span>Ордена<span class="badge">IV</span></a>
+        <a href="./artifacts.html" aria-current="page"><span class="navicon">⬡</span>Артефакты<span class="badge">V</span></a>
+        <a href="./chronology.html"><span class="navicon">⟠</span>Хронология<span class="badge">VI</span></a>
+        <a href="./law.html"><span class="navicon">⟢</span>Кодекс / Закон<span class="badge">VII</span></a>
+        <a href="./changelog.html"><span class="navicon">⟲</span>Журнал изменений<span class="badge">LOG</span></a>
+        <a href="./heresy.html"><span class="navicon">⚠</span>Ересь и мифы<span class="badge">ERR</span></a>
+        <a href="./people.html"><span class="navicon">⟟</span>Лица и фигуры<span class="badge">DB</span></a>
+        <a href="./templates.html"><span class="navicon">⧉</span>Шаблоны<span class="badge">TPL</span></a>
+        <a href="./faq.html"><span class="navicon">?</span>FAQ<span class="badge">HELP</span></a>
       </nav>
 
       <div class="footer">
-        <div><span class="kbd">v1.0</span> • STATUS: <b>VERIFIED</b></div>
+        SECTION: V • REGISTRY<br />
+        RULE: ONE ITEM = ONE CANON
       </div>
     </aside>
 
     <main class="main">
-      <div class="header" data-stamp="TIMELINE • VERIFIED COPY">
-        <h2>Раздел V — История и хронология</h2>
+      <section class="header reveal" data-stamp="VERIFIED • SECTION V • REGISTRY">
+        <h2>Артефакты и Кристаллы</h2>
         <div class="meta">
-          <div class="pill ok"><strong>STATUS:</strong> VERIFIED</div>
-          <div class="pill"><strong>CODE:</strong> V</div>
-          <div class="pill"><strong>MODE:</strong> INTERACTIVE</div>
+          <span class="pill ok"><strong>СТАТУС:</strong> VERIFIED</span>
+          <span class="pill"><strong>РЕЖИМ:</strong> Официальный реестр</span>
+          <span class="pill warn"><strong>ПРАВИЛО:</strong> Один предмет — один канон</span>
         </div>
-      </div>
+      </section>
 
-      <div class="callout">
-        <strong>Примечание:</strong> конкретные даты BBY/ABY добавляются поправкой.
-        До этого применяется порядок и причинность событий.
-      </div>
-
-      <h3 data-article="V-1">V-1 Лента событий</h3>
-      <div class="timeline">
-        <div class="tl-item">
-          <div class="tl-head">
-            <span class="tl-date">19 BBY (условно)</span>
-            <div class="tl-title">Начало Войн клонов</div>
-          </div>
-          <div class="tl-body">
-            <p>Республика мобилизует силы. Джедаи получают военный мандат. Растёт нагрузка миссий и политическое давление.</p>
-          </div>
+      <section class="reveal">
+        <div class="callout">
+          Любой предмет, не внесённый в реестр, не имеет “канонических эффектов”.
+          Добавления и правки проходят через <a href="./changelog.html">LOG</a> и утверждение (VII).
         </div>
 
-        <div class="tl-item">
-          <div class="tl-head">
-            <span class="tl-date">Эскалация</span>
-            <div class="tl-title">Рост скрытого влияния</div>
-          </div>
-          <div class="tl-body">
-            <p>Усиление разведопераций, контрразведки и провокаций. Внутренние конфликты между принципами и прагматикой.</p>
-          </div>
+        <h3 id="article-v-1">V-1. Общие правила реестра <a class="anchor" href="#article-v-1">#</a></h3>
+        <p>
+          1) Артефакт обязан иметь: ID, происхождение, владельческие ограничения, эффекты, цену риска (если есть).<br />
+          2) “Комбинации” артефактов допускаются только при явном описании синергии (советом/прецедентом).
+        </p>
+
+        <h3 id="article-v-2">V-2. Реестр (образец записей) <a class="anchor" href="#article-v-2">#</a></h3>
+        <table class="table">
+          <thead>
+            <tr><th>ID</th><th>Наименование</th><th>Эффект</th><th>Ограничения</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CR-101</strong></td>
+              <td>Кристалл (стандартный)</td>
+              <td>Фокусировка клинка / стабильность</td>
+              <td>Выдаётся по линии ордена или квеста</td>
+            </tr>
+            <tr>
+              <td><strong>AR-201</strong></td>
+              <td>Голокрон (учебный)</td>
+              <td>Доступ к техникам уровня “база/средний”</td>
+              <td>Требует допуска. Не выдаёт “всесилие”.</td>
+            </tr>
+            <tr>
+              <td><strong>AR-404</strong></td>
+              <td>Запечатанный носитель</td>
+              <td>Содержимое неизвестно до сюжетного вскрытия</td>
+              <td>Только мастер/совет определяет открытие</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 id="article-v-3">V-3. Кристаллы и цвет <a class="anchor" href="#article-v-3">#</a></h3>
+        <p>
+          Цвет клинка не является “пассивной лицензией” на набор способностей.
+          Способности определяются подготовкой (II, IV) и соблюдением сторон (III).
+        </p>
+
+        <div class="verdict" id="verdict-artifacts-1">
+          <strong>РЕШЕНИЕ СОВЕТА КАНОНА:</strong><br />
+          Любой “уникальный предмет” без записи реестра считается <strong>неактивным</strong> до утверждения.
         </div>
 
-        <div class="tl-item">
-          <div class="tl-head">
-            <span class="tl-date">Перелом</span>
-            <div class="tl-title">Кризис доверия</div>
-          </div>
-          <div class="tl-body">
-            <p>Растёт страх, усиливается контроль. Ситхские интересы маскируются под “стабилизацию”.</p>
-          </div>
+        <div class="footer">
+          NEXT: Раздел VI — Хронология • <a href="./chronology.html">OPEN</a>
         </div>
-      </div>
-
-      <h3 data-article="V-2">V-2 Институты</h3>
-      <table class="table">
-        <thead><tr><th>Роль</th><th>Описание</th><th>Статус</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>Совет Джедаев</td>
-            <td>мандаты, допуски, дисциплина, ключевые решения Ордена</td>
-            <td>действует</td>
-          </tr>
-          <tr>
-            <td>Ситхский центр влияния</td>
-            <td>скрытые структуры управления страхом и амбициями</td>
-            <td>скрытно</td>
-          </tr>
-          <tr>
-            <td>Совет Канона (проект)</td>
-            <td>утверждение статей, толкования, прецеденты</td>
-            <td>высшая инстанция (LAW)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="footer">
-        <div>NEXT: <a href="law.html">LAW — Свод норм Республики</a></div>
-      </div>
+      </section>
     </main>
   </div>
 
   <script src="../assets/bg.js"></script>
-  <script src="../assets/script.js"></script>
   <script src="../assets/search.js"></script>
+  <script src="../assets/script.js"></script>
 </body>
 </html>
